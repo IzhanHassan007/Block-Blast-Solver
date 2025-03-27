@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlockBlast Solver</title>
+  <link rel="stylesheet" href="css/master.css" />
+  <link rel="stylesheet" href="css/automatic.css" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3013850043603569"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <button id="manualBtn">Or Manually Input It</button>
+
+  <br />
+
+  <input type="file" id="image-upload" accept="image/*" />
+
+  <canvas id="canvas"></canvas>
+
+  <div id="result">
+    <h2>Starting Grid:</h2>
+    <div class="main-grid-container">
+      <div class="grid" id="main-grid"></div>
+    </div>
+    <h3>Pieces:</h3>
+    <div class="small-grids-container">
+      <div class="grid" id="small-grid-1"></div>
+      <div class="grid" id="small-grid-2"></div>
+      <div class="grid" id="small-grid-3"></div>
+    </div>
+
+    <div id="moves"></div>
+  </div>
+
+  <script type="module" src="js/automatic.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+:root {
+  --main-grid-size: 40vw;
+  /* 50% of viewport width */
+  --small-grid-size: 30vw;
+  /* 30% of viewport width */
+  --cell-gap: 2%;
+  /* 2% gap between cells */
+  --non-taken-color: lightgreen;
+  --taken-color: coral;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+.main-grid-container,
+.small-grids-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--cell-gap);
+}
+
+#main-grid {
+  grid-template-columns: repeat(8, calc((100% - 7 * var(--cell-gap)) / 8));
+  grid-template-rows: repeat(8, calc((100% - 7 * var(--cell-gap)) / 8));
+  width: var(--main-grid-size);
+  height: var(--main-grid-size);
+}
+
+.small-grids-container {
+  gap: var(--cell-gap);
+}
+
+#small-grid-1,
+#small-grid-2,
+#small-grid-3 {
+  grid-template-columns: repeat(5, calc((100% - 7 * var(--cell-gap)) / 5));
+  grid-template-rows: repeat(5, calc((100% - 7 * var(--cell-gap)) / 5));
+  width: var(--small-grid-size);
+  height: var(--small-grid-size);
+}
+
+.cell {
+  background-color: var(--non-taken-color);
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+
+.cell.taken {
+  background-color: var(--taken-color);
+}
+
+
+
+#moves {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #add8e6;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover effect */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Active state (when the button is clicked) */
+button:active {
+  background-color: #4682b4;
+  transform: scale(1);
+}
+
+canvas {
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 50%;
+  height: auto;
+}

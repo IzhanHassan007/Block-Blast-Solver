@@ -1,0 +1,16 @@
+.cell {
+  cursor: pointer;
+}
+
+#submitButton {
+  width: 90%;
+  font-weight: bold;
+  border-width: 0.5px;
+  border-radius: 5px;
+
+  transition: width 0.1s;
+}
+
+#submitButton:hover {
+  width: 92%;
+}
